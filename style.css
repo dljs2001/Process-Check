@@ -1,0 +1,184 @@
+/* Reset and global styles */
+body::before {
+  content: "";
+  background-image: url('./dhani.jpg'); /* Replace with the path to your SVG logo */
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 100px; /* Adjust the size of the logo pattern */
+  opacity: 0.1; /* Adjust the opacity for the watermark effect */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; /* Allow clicks to go through the watermark */
+  z-index: -1; /* Place the watermark behind other content */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom styles for the layout */
+body {
+  background-color: #686868;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #424242;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.credit-card-form {
+  max-width: 400px;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  background-color: #dbdbdb;
+  margin-bottom: 20px;
+}
+
+.credit-card-form h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.credit-card-form {
+  max-width: 400px;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  background-color: rgba(219, 219, 219, 0.308); /* Adjust the alpha value as needed */
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.mobile-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #777;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.click-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #585858;
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.click-button:hover {
+  background-color: #bebebe;
+  color: #424242;
+}
+
+.click-button:focus {
+  outline: none;
+}
+
+.clarification-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@keyframes flashColors {
+  0% {
+    background-color: #007bff; /* Blue */
+  }
+  100% {
+    background-color: #28a745; /* Green */
+  }
+}
+
+/* Apply the flashing animation to the "Processing Payment" button */
+.click-button.processing {
+  animation: flashColors 1s infinite alternate;
+  background-color: #007bff; /* Start with blue background */
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 14px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+/* ... (your existing styles) ... */
+
+/* Add keyframes animation for flashing text */
+@keyframes flashText {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply the flashing animation to the "Speak To your Assigned Agent For Any Clarification" text */
+.clarification-text p {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 70%;
+  text-shadow: 0 0 5px #cacaca;
+  margin: 0;
+}
+
+/* Add the flashing animation */
+.clarification-text p {
+  animation: flashText 2.0s infinite;
+}
+
+/* ... (your existing styles) ... */

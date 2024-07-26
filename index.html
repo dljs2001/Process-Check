@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhani Finance</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300&family=Pacifico&display=swap');
+
+    /* Custom font for Hindi translation */
+    .hindi-font {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+    }
+  </style>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="credit-card-form">
+      <h2>
+        <div class="logo-container">
+          <img src="./dhani.png" alt="Logo" class="logo" width="250" height="250">
+        </div>
+        Dear Dhani Finance Customer, please enter your name and registered mobile number to view your current status.
+        <span class="hindi-font"></span>
+      </h2>
+      <form id="payment-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="mobile-number">Mobile Number</label>
+          <input type="tel" id="mobile-number" placeholder="Your Mobile Number" class="mobile-input" maxlength="10" required>
+        </div>
+        <div id="error-message" style="color: red;"></div>
+        <button type="submit" class="click-button" onclick="validateForm(event)">Click hee to check status</button>
+      </form>
+      <img id="success-image" src="" alt="Success Image" style="display: none; width: 100%; height: auto; margin-top: 20px;">
+    </div>
+    <div class="clarification-text">
+      <p>Speak to your assigned agent for any clarification.</p>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
