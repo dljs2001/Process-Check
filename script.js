@@ -7,7 +7,7 @@ function validateForm(event) {
   const successImage = document.getElementById("success-image");
 
   // Specific valid mobile number
-  const validMobileNumber = "8310119200";
+  const validMobileNumber = "9845940999";
 
   if (name === "") {
     errorMessage.textContent = "Please enter your name.";
